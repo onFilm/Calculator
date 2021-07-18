@@ -1,0 +1,184 @@
+@font-face { font-family: Delicious; src: url('../../Delicious.otf') format("opentype");} 
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.top div {
+  flex-grow: 1;
+}
+
+h1 {
+  max-height: 100px;
+  font-family: Delicious;
+  font-size: 8em;
+  text-align: center;
+}
+
+h1.light {
+  color: black;
+}
+
+h1.dark {
+  color: white;
+}
+
+.alertMsg {
+    width: 50%;
+    left: 25%
+}
+
+.theme {
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
+
+.box-dark {
+  background-color: #2d3436;
+  background-image: linear-gradient(#2d3436 0%, #000000 74%);
+}
+
+.box-light {
+  background-color: #fee2f8;
+  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);  
+}
+
+fa-icon {
+  float: right;
+  opacity: 80%;
+  margin-right: 20px;
+  border-radius:0 0 4px 4px;
+  border-bottom: 4px solid lime;
+  padding: 0 10px 0 10px;
+}
+
+fa-icon:hover {
+  border-bottom: 8px solid lime;
+  opacity: 100% !important;
+}
+
+fa-icon.light {
+  color: black;
+  background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+}
+
+fa-icon.dark {
+  background-image: linear-gradient(315deg, #ef5734 0%, #ffcc2f 74%);
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: red; /* Black background color */
+    color: #fff; /* White text color */
+    font-weight: bold;
+    text-align: center; /* Centered text */
+    border-radius: 5px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  /* The switch - the box around the slider */
+.switch {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
