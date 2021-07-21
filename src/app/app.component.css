@@ -182,3 +182,11 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+@media screen and (max-width: 600px)
+  {      
+    .col-sm {
+      width: 25%;
+    }
+  }
