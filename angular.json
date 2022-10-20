@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "calc"
+  "defaultProject": "calc",
+  "cli": {
+    "analytics": false
+  }
 }
