@@ -8,6 +8,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title: string = 'Calc'
   expression: string = '';
   disable: boolean = false;
   selectedOperator: string = '';

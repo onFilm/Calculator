@@ -2,7 +2,7 @@
   <div class="container">
     <div class="top">
       <div>
-        <h1 [ngClass]="lightTheme ? 'light' : 'dark'">Calculator</h1>
+        <h1 id="title" [ngClass]="lightTheme ? 'light' : 'dark'">Calculator</h1>
       </div>
       <div>
         <fa-icon class = "fa-3x" [ngClass]="lightTheme ? 'light' : 'dark'" [icon]="lightTheme ? faMoon : faSun" (click) = "switchTheme()"></fa-icon>
