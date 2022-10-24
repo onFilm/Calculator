@@ -1,8 +1,8 @@
 name: Version Increment
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: main
+    
 jobs:
   version:
     runs-on: ubuntu-latest
