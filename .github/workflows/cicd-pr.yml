@@ -1,0 +1,23 @@
+# This workflow will build a calculator app
+name: calculator-main
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm test
