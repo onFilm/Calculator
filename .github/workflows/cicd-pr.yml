@@ -1,5 +1,5 @@
 # This workflow will build a calculator app
-name: calculator-main
+name: calculator-pull-request
 on:
   pull_request:
     branches: [ main ]
