@@ -1,10 +1,12 @@
 # This workflow will build a calculator app
-name: calculator
+name: calculator-main
 on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+    types: [closed]
 
 jobs:
   build_pipeline:
