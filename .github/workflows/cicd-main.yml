@@ -1,8 +1,6 @@
 # This workflow will build calculator app, update new version number and push docker image to docker hub
 name: calculator-main
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: 
       - main
