@@ -32,6 +32,6 @@ jobs:
         - run: VERSION=$(node -p "require('./package.json').version")
         - run: git tag ${VERSION}
         - run: echo HEAD:${{ github.head_ref }}
-        - run: git pull
+        - run: git pull origin main
         - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" HEAD:${{ github.head_ref }} --tags
         - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" HEAD:${{ github.head_ref }} --follow-tags
